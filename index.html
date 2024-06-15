@@ -24,7 +24,7 @@
             </div>
             <div class="second_section">
                 <label>Lease Period (month):</label>
-                <select>
+                <select id="myChoice">
                     <option value="12">12</option>
                     <option value="24">24</option>
                     <option value="36">36</option>
@@ -46,17 +46,18 @@
                     <input type="range" min="10" max="50" value="10" class="slider" id="mySecondRange" />
                 </div>
             </div>
+            <button id="showResult">SHOW RESULT</button>
         </div>
         <div class="result_container">
             <h2>Leasing Details</h2>
             <div class="show_details_container">
                 <div class="details_section1">
-                    <label>Total Leasing Cost: €<span class="showTotal">153231</span></label>
-                    <label>Down Payment: €<span class="showPayment">145000</span></label>
+                    <label>Total Leasing Cost: €<span class="showTotal" id="showTotal"></span></label>
+                    <label>Down Payment: €<span class="showPayment" id="showPayment"></span></label>
                 </div>
                 <div class="details_section2">
-                    <label>Total Leasing Cost: €<span class="showTotal">124251</span></label>
-                    <label>Down Payment: €<span class="showPayment">511222</span></label>
+                    <label>Monthly Installment: €<span class="showTotal" id="monthPrice"></span></label>
+                    <label>Interest Rate: €<span class="showPayment">511222</span></label>
                 </div>
             </div>
         </div>
