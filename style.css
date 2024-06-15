@@ -166,7 +166,7 @@ body {
         padding: 10px;
     }
 
-    .slideContainer label{
+    .slideContainer label {
         font-family: Arial, Helvetica, sans-serif;
         font-size: 0.8em;
         margin: 2px -10px;
@@ -174,12 +174,32 @@ body {
     }
 
     .slideContainer span,
-    .slideContainer input{
+    .slideContainer input {
         margin: 5px -10px;
         padding: 10;
     }
 
-    .show_details_container{
+    .show_details_container {
         width: 100%;
+        display: block;
+    }
+
+    .details_section1 {
+        width: 100%;
+        border: none;
+    }
+
+    .details_section1 label,
+    .details_section2 label {
+        border: 1px solid lightgray;
+        border-radius: 7px;
+        margin: 5px;
+    }
+
+    .details_section2 {
+        width: 100%;
+        border: none;
+        margin: 0;
+        padding: 0;
     }
 }
