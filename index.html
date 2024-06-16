@@ -14,7 +14,7 @@
         <div class="section_container">
             <div class="first_section">
                 <label>Car:</label>
-                <select>
+                <select id="myCar">
                     <option value="audi">AUDI</option>
                     <option value="vw">VW</option>
                     <option value="bmw">BMW</option>
@@ -24,7 +24,7 @@
             </div>
             <div class="second_section">
                 <label>Lease Period (month):</label>
-                <select id="myChoice">
+                <select id="monthChoice">
                     <option value="12">12</option>
                     <option value="24">24</option>
                     <option value="36">36</option>
@@ -46,18 +46,18 @@
                     <input type="range" min="10" max="50" value="10" class="slider" id="mySecondRange" />
                 </div>
             </div>
-            <button id="showResult">SHOW RESULT</button>
+            <button class="showResult" id="showResult">SHOW RESULT</button>
         </div>
         <div class="result_container">
             <h2>Leasing Details</h2>
             <div class="show_details_container">
                 <div class="details_section1">
-                    <label>Total Leasing Cost: €<span class="showTotal" id="showTotal"></span></label>
-                    <label>Down Payment: €<span class="showPayment" id="showPayment"></span></label>
+                    <label>Total Leasing Cost: <span class="showTotal" id="showTotal"></span></label>
+                    <label>Down Payment: <span class="showPayment" id="firstPrice"></span></label>
                 </div>
                 <div class="details_section2">
-                    <label>Monthly Installment: €<span class="showTotal" id="monthPrice"></span></label>
-                    <label>Interest Rate: €<span class="showPayment">511222</span></label>
+                    <label>Monthly Installment: <span class="showTotal" id="monthPrice"></span></label>
+                    <label>Interest Rate: <span class="showPayment" id="showPayment"></span></label>
                 </div>
             </div>
         </div>
