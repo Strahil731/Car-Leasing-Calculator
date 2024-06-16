@@ -23,19 +23,54 @@ function showTotalCost() {
     btn.addEventListener("click", (event) => {
         event.preventDefault();
 
-        let carValue = document.getElementById("myRange").value;
-        let downPayment = document.getElementById("mySecondRange").value;
-        let monthChoice = document.getElementById("myChoice").value;
+        let myCar = document.getElementById("myCar").value;
+        let carPrice = document.getElementById("myRange").value;
+        let percentPrice = document.getElementById("mySecondRange").value;
+        let monthChoice = document.getElementById("monthChoice").value;
 
-        let showTotalSum = document.getElementById("showTotal");
+        let showPayment = document.getElementById("showPayment");
+        let showTotal = document.getElementById("showTotal");
+        let firstPrice = document.getElementById("firstPrice");
         let monthPrice = document.getElementById("monthPrice");
 
-        let sum1 = Number(carValue);
-        let sum2 = Number(downPayment);
-        let numberMonth = Number(monthChoice);
 
-        showTotalSum.innerHTML = (sum1 + (sum1 * sum2 / 100)).toFixed(2);
-        monthPrice.innerHTML = ((sum1 + (sum1 * sum2 / 100)) / numberMonth).toFixed(2)
+        let convertPriceToNumber = Number(carPrice);
+        let convertPercentToNumber = Number(percentPrice);
+        let convertMonthToNumber = Number(monthChoice);
+
+        switch (myCar) {
+            case "audi":
+                showPayment.innerHTML = "2.90%";
+                showTotal.innerHTML = `€${(convertPriceToNumber + (convertPriceToNumber * 2.90) / 100).toFixed(2)}`;
+                monthPrice.innerHTML = `€${((convertPriceToNumber + (convertPriceToNumber * 2.90) / 100) / convertMonthToNumber).toFixed(2)}`;
+                break;
+
+            case "vw":
+                showPayment.innerHTML = "1.98%";
+                showTotal.innerHTML = `€${(convertPriceToNumber + (convertPriceToNumber * 1.98) / 100).toFixed(2)}`;
+                monthPrice.innerHTML = `€${((convertPriceToNumber + (convertPriceToNumber * 1.98) / 100) / convertMonthToNumber).toFixed(2)}`;
+                break;
+
+            case "bmw":
+                showPayment.innerHTML = "3.19%";
+                showTotal.innerHTML = `€${(convertPriceToNumber + (convertPriceToNumber * 3.19) / 100).toFixed(2)}`;
+                monthPrice.innerHTML = `€${((convertPriceToNumber + (convertPriceToNumber * 3.19) / 100) / convertMonthToNumber).toFixed(2)}`;
+                break;
+
+            case "opel":
+                showPayment.innerHTML = "1.45%";
+                showTotal.innerHTML = `€${(convertPriceToNumber + (convertPriceToNumber * 1.45) / 100).toFixed(2)}`;
+                monthPrice.innerHTML = `€${((convertPriceToNumber + (convertPriceToNumber * 1.45) / 100) / convertMonthToNumber).toFixed(2)}`;
+                break;
+
+            case "lada":
+                showPayment.innerHTML = "1.78%";
+                showTotal.innerHTML = `€${(convertPriceToNumber + (convertPriceToNumber * 1.78) / 100).toFixed(2)}`;
+                monthPrice.innerHTML = `€${((convertPriceToNumber + (convertPriceToNumber * 1.78) / 100) / convertMonthToNumber).toFixed(2)}`;
+                break;
+        }
+
+        firstPrice.innerHTML = `€${(carPrice * convertPercentToNumber / 100).toFixed(2)}`;
     });
 }
 
